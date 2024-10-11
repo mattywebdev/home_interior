@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <header class="bg-light py-5">
+        <div class="container text-center">
+            <h1 class="display-4">Welcome to Our Interior Design Studio</h1>
+            <p class="lead">Creating beautiful and functional spaces tailored to your style.</p>
+            <a href="#portfolio" class="btn btn-custom mt-4">View Our Work</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <p class="lead">We are a creative team of designers dedicated to transforming spaces with modern and timeless designs.</p>
+            <p>Our team is composed of experienced designers who are passionate about crafting unique environments that reflect the personalities and lifestyles of our clients. We believe that every space has potential and strive to unlock that potential through thoughtful design.</p>
+            <p>Whether you're looking for a complete overhaul or a simple refresh, we approach each project with creativity and attention to detail. Let us help you create a space that you'll love.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Portfolio</h2>
+            <p class="text-center">Explore our recent projects and discover how we can enhance your space.</p>
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/project1.jpg' %}" class="card-img-top" alt="Living Room Design">
+                        <h5 class="card-title">Living Room Design</h5>
+                        <p class="card-text">A cozy and modern living room that reflects personal style.</p>
+                        <a href="{% url 'portfolio' %}">View More</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/project2.jpg' %}" class="card-img-top" alt="Modern Kitchen">
+                        <h5 class="card-title">Modern Kitchen</h5>
+                        <p class="card-text">An elegant kitchen with state-of-the-art appliances.</p>
+                        <a href="{% url 'portfolio' %}">View More</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/project3.jpg' %}" class="card-img-top" alt="Modern Bathroom">
+                        <h5 class="card-title">Modern Bathroom</h5>
+                        <p class="card-text">A sleek and functional bathroom designed for relaxation.</p>
+                        <a href="{% url 'portfolio' %}">View More</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/project4.jpg' %}" class="card-img-top" alt="Bedroom Design">
+                        <h5 class="card-title">Bedroom Design</h5>
+                        <p class="card-text">A tranquil bedroom that offers a perfect night's sleep.</p>
+                        <a href="{% url 'portfolio' %}">View More</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/project5.jpg' %}" class="card-img-top" alt="Office Space">
+                        <h5 class="card-title">Office Space</h5>
+                        <p class="card-text">A modern office designed for productivity and comfort.</p>
+                        <a href="{% url 'portfolio' %}">View More</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/project6.jpg' %}" class="card-img-top" alt="Dining Area">
+                        <h5 class="card-title">Dining Area</h5>
+                        <p class="card-text">An inviting dining space perfect for family gatherings.</p>
+                        <a href="{% url 'portfolio' %}">View More</a>
+                    </div>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                loop: true,
+            });
+        });
+    </script>
+{% endblock %}

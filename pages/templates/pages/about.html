@@ -1,0 +1,50 @@
+<!-- templates/homepage/about.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="about-header">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Discover our story, mission, and the team that brings your vision to life.</p>
+        </div>
+    </section>
+
+    <section class="about-mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>We strive to create living spaces that inspire and elevate the way you experience your home. 
+            Our goal is to seamlessly blend aesthetics with functionality.</p>
+        </div>
+    </section>
+
+    <section class="about-team">
+        <div class="container">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="{% static 'images/joe.jpg' %}" alt="John Doe">
+                    <h3>Joe Doe</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="{% static 'images/jane.jpg' %}" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p>Lead Designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="{% static 'images/rose.jpg' %}" alt="Mike Brown">
+                    <h3>Rose Brown</h3>
+                    <p>Project Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-history">
+        <div class="container">
+            <h2>Our History</h2>
+            <p>Founded in 2010, we have over a decade of experience transforming homes across the country. 
+            With hundreds of completed projects, our passion for design continues to grow.</p>
+        </div>
+    </section>
+{% endblock %}

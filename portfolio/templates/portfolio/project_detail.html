@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h2>{{ project.title }}</h2>
+        <img src="{{ project.image.url }}" class="img-fluid" alt="{{ project.title }}">
+        <p class="mt-4">{{ project.description }}</p>
+        <a href="{% url 'portfolio' %}" class="btn btn-primary">Back to Portfolio</a>
+    </div>
+</section>
+{% endblock %}
