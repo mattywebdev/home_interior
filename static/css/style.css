@@ -252,19 +252,85 @@ button.btn-primary:hover {
   bottom: -20px !important;
 }
 
-.social-media-bar {
-  display: flex;
-  justify-content: space-around;
-  background-color: #333;
-  padding: 10px;
+
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(90deg, #343a40, #212529); /* Keep the gradient for a modern look */
+  border-bottom: 2px solid #ffcc00; /* Stylish bottom border */
 }
 
-.social-icon {
+.navbar-brand {
+  font-family: 'Poppins', sans-serif; /* Sleek modern font */
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffcc00; /* Accent color for brand */
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #ffffff; /* Change color on hover for brand */
+}
+
+.nav-link {
+  font-size: 1.1rem; /* Slightly larger font for readability */
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  padding: 10px 15px; /* Better padding for spacing */
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffcc00; /* Gold underline effect */
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #ffcc00 !important; /* Gold color on hover */
+}
+
+/* Remove the navbar background hover change */
+.navbar:hover {
+  background: linear-gradient(90deg, #343a40, #212529); /* Keep the gradient without change on hover */
+}
+
+/* Button styling */
+.navbar-toggler {
+  border: none; /* Remove the border for a slicker button */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff; /* White color for button icon */
+  border-radius: 2px;
+}
+
+/* Footer styling */
+footer {
+  background-color: #212529; /* Darker footer */
   color: white;
-  font-size: 24px; /* Adjust size as needed */
-  text-decoration: none;
+  padding: 20px 0;
 }
 
-.social-icon:hover {
+.social-media-bar a {
+  margin: 0 15px;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-media-bar a:hover {
   color: #ffcc00; /* Change color on hover */
+}
+
+/* Social icon size */
+.social-icon i {
+  font-size: 1.5rem;
 }
